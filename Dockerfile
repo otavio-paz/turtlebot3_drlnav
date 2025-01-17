@@ -82,7 +82,7 @@ RUN echo \
     "\n"\
     "source /opt/ros/foxy/setup.bash\n"\
     "# ROS2 domain id for network communication, machines with the same ID will receive each others' messages\n"\
-    "export ROS_DOMAIN_ID=1\n"\
+    "export ROS_DOMAIN_ID=30\n"\
     "export DRLNAV_BASE_PATH='/home/turtlebot3_drlnav'\n"\
     "# Source the workspace\n"\
     "source \$DRLNAV_BASE_PATH/install/setup.bash\n"\
