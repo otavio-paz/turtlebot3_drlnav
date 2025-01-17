@@ -182,6 +182,7 @@ class DRLEnvironment(Node):
 
     def step_comm_callback(self, request, response):
         if len(request.action) == 0:
+            print("Received empty action!")
             return self.initalize_episode(response)
 
         # Unnormalize actions
@@ -191,13 +192,19 @@ class DRLEnvironment(Node):
             action_linear = (request.action[LINEAR] + 1) / 2 * REAL_SPEED_LINEAR_MAX
         action_angular = request.action[ANGULAR] * REAL_SPEED_ANGULAR_MAX
 
+        # # Check if actions are NaN
+        # if math.isnan(action_linear) or math.isnan(action_angular):
+        #     print("Received NaN values!")
+        #     action_linear = 0.1
+        #     action_angular = 0.1
+
         # Publish action cmd
         twist = Twist()
         twist.linear.x = action_linear
         twist.angular.z = action_angular
         self.cmd_vel_pub.publish(twist)
 
-        # Prepare repsonse
+        # Prepare response
         response.state = self.get_state(request.previous_action[LINEAR], request.previous_action[ANGULAR])
         response.reward = 0.0
         response.done = self.done

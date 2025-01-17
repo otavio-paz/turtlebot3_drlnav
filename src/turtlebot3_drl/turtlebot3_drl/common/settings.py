@@ -48,16 +48,16 @@ REAL_TOPIC_ODOM  = 'odom'
 # NUM_SCAN_SAMPLES for the model in drl_environment.py
 # e.g. if you increase this by 320 samples also increase
 # NUM_SCAN_SAMPLES by 320 samples.
-REAL_N_SCAN_SAMPLES         = 40
+REAL_N_SCAN_SAMPLES         = 40    #TurtleBot3
 
-REAL_ARENA_LENGTH           = 4.2   # meters
-REAL_ARENA_WIDTH            = 4.2   # meters
-REAL_SPEED_LINEAR_MAX       = 0.22  # in m/s
-REAL_SPEED_ANGULAR_MAX      = 2.0   # in rad/s
+REAL_ARENA_LENGTH           =  4.2 # 1.8  # 4.2   # meters
+REAL_ARENA_WIDTH            = 4.2 # 1.8  # 4.2   # meters
+REAL_SPEED_LINEAR_MAX       = 0.22 # 0.15 # 0.22  # in m/s
+REAL_SPEED_ANGULAR_MAX      = 2.0 # 1.5  # 2.0   # in rad/s
 
-REAL_LIDAR_CORRECTION       = 0.40  # meters, subtracted from the real LiDAR values
-REAL_LIDAR_DISTANCE_CAP     = 3.5   # meters, scan distances are capped this value
-REAL_THRESHOLD_COLLISION    = 0.11  # meters, minimum distance to an object that counts as a collision
+REAL_LIDAR_CORRECTION       = 0.40 #0.10  # 0.40  # meters, subtracted from the real LiDAR values
+REAL_LIDAR_DISTANCE_CAP     = 3.5 # 3.0   # 3.5   # meters, scan distances are capped this value
+REAL_THRESHOLD_COLLISION    = 0.11 #0.07  # 0.11  # meters, minimum distance to an object that counts as a collision
 REAL_THRESHOLD_GOAL         = 0.35  # meters, minimum distance to goal that counts as reaching the goal
 
 
