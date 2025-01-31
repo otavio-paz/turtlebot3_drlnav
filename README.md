@@ -317,8 +317,6 @@ For DDPG:
 ros2 run turtlebot3_drl train_agent ddpg
 ```
 
-The first argument indicates whether we are testing or training (0 = testing, 1 = training)
-
 <!-- *optional arguments:*
 - The second argument indicates the name of the model if we are continuing training (e.g. "path/to/model/ddpg_1")
 - The third argument indicates from which episode to continue training -->
